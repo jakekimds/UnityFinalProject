@@ -9,6 +9,12 @@ public class GUIManager : MonoBehaviour {
 
 	public Text dialogText;
 	public GameObject dialogBackground;
+
+	public Text directionText;
+	public GameObject directionBackground;
+	public float directionPulsePeriod = 1;
+	public CanvasGroup directiongroup;
+
 	public GameObject dot;
 
 	public GameObject interaction;
@@ -16,10 +22,17 @@ public class GUIManager : MonoBehaviour {
 	private float dialogShowCountdown;
 	private bool dialogShowCountingdown;
 
+
+	private float directionShowCountdown;
+	private bool directionShowCountingdown;
+
 	// Use this for initialization
 	void Awake () {
 		dialogShowCountdown = 0;
+		directionPulsePeriod = Mathf.PI /directionPulsePeriod;
 		dialogShowCountingdown = false;
+		directionShowCountdown = 0;
+		directionShowCountingdown = false;
 		if (instance != null) {
 			Destroy (gameObject);
 			this.enabled = false;
@@ -30,11 +43,39 @@ public class GUIManager : MonoBehaviour {
 	}
 
 	private void Update() {
+
+		if (directionShowCountingdown) {
+			directionShowCountdown -= Time.deltaTime;
+			if (directionShowCountdown <= 0) {
+				showDirections(false, 0);
+			}
+		}
+
+		if (directionBackground.activeInHierarchy) {
+			directiongroup.alpha = .4f * Mathf.Cos(Time.time * directionPulsePeriod) + .8f;
+		}
+
 		if (dialogShowCountingdown) {
 			dialogShowCountdown -= Time.deltaTime;
 			if (dialogShowCountdown <= 0) {
 				showDialog(false);
 			}
+		}
+	}
+
+	public void directions(string newText, float time) {
+		directionText.text = newText;
+		showDirections(true, time);
+	}
+
+
+	public void showDirections(bool show, float time) {
+		directionBackground.SetActive(show);
+		if (time > 0) {
+			directionShowCountingdown = true;
+			directionShowCountdown = time;
+		} else {
+			directionShowCountingdown = false;
 		}
 	}
 

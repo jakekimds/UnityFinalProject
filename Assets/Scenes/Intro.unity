@@ -721,7 +721,7 @@ Transform:
   m_PrefabInternal: {fileID: 240799062}
 --- !u!114 &248980532 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114010858984185394, guid: f6bb3aeb9073b444e8d2fcf0d67b1c7d,
+  m_PrefabParentObject: {fileID: 114981887599498004, guid: f6bb3aeb9073b444e8d2fcf0d67b1c7d,
     type: 2}
   m_PrefabInternal: {fileID: 1868155465}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -1241,6 +1241,8 @@ MonoBehaviour:
   currentTarget: 0
   winstonHead: {fileID: 2096527638}
   tutorialSceneName: Tutorial
+  introStory: {fileID: 1717701049}
+  introStoryFadeTime: 1
 --- !u!1001 &666823599
 Prefab:
   m_ObjectHideFlags: 0
@@ -2801,7 +2803,7 @@ Transform:
   m_PrefabInternal: {fileID: 1222692933}
 --- !u!1 &1261956487 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1179484621130042, guid: f6bb3aeb9073b444e8d2fcf0d67b1c7d,
+  m_PrefabParentObject: {fileID: 1223965602168266, guid: f6bb3aeb9073b444e8d2fcf0d67b1c7d,
     type: 2}
   m_PrefabInternal: {fileID: 1868155465}
 --- !u!1 &1291614889 stripped
@@ -3753,6 +3755,11 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 418792, guid: f7062f5e280305843958a840362dd8b9, type: 2}
   m_PrefabInternal: {fileID: 1705467734}
+--- !u!225 &1717701049 stripped
+CanvasGroup:
+  m_PrefabParentObject: {fileID: 225057197668912858, guid: f6bb3aeb9073b444e8d2fcf0d67b1c7d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1868155465}
 --- !u!1001 &1730555757
 Prefab:
   m_ObjectHideFlags: 0
@@ -4296,6 +4303,19 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465268154918504, guid: f6bb3aeb9073b444e8d2fcf0d67b1c7d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114181362944245978, guid: f6bb3aeb9073b444e8d2fcf0d67b1c7d,
+        type: 2}
+      propertyPath: m_Text
+      value: When IT Guy asks the greedy, pointy haired, Bossman for a raise, Bossman
+        goes too far and throws an object of indescribable evil at the money-striken
+        IT Guy. Insulted, IT Guy appeals to the almighty Giant Cactus for justice.
+        Will Bossman learn his lesson, or will he be forever condemned to the punishment
+        of the cactus?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6bb3aeb9073b444e8d2fcf0d67b1c7d, type: 2}

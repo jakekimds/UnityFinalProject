@@ -3986,21 +3986,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2387076, guid: 5241474d8a890dc45804e91d2deef410, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0035522bd7d405d498fd9a7f41b50462, type: 2}
-    - target: {fileID: 449608, guid: 5241474d8a890dc45804e91d2deef410, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 449608, guid: 5241474d8a890dc45804e91d2deef410, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 10
+    - target: {fileID: 126832, guid: 5241474d8a890dc45804e91d2deef410, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5241474d8a890dc45804e91d2deef410, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &258383771 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114712403325258136, guid: 5241474d8a890dc45804e91d2deef410,
+    type: 2}
+  m_PrefabInternal: {fileID: 258383769}
+  m_Script: {fileID: 11500000, guid: fc0d34df4dd28c9408c7fa1aa94b09d6, type: 3}
 --- !u!4 &260804409 stripped
 Transform:
   m_PrefabParentObject: {fileID: 438162, guid: a1291014f043d2c4faf8c717cf9e34b7, type: 2}
@@ -6911,6 +6909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onlyOnce: 0
+  canUse: 1
 --- !u!4 &580868974 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4138728259921112, guid: 28f189f837e07aa47aa80348c75b20dc,
@@ -10934,6 +10933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetX: -56
+  interaction: {fileID: 258383771}
 --- !u!1001 &987415807
 Prefab:
   m_ObjectHideFlags: 0

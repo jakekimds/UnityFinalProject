@@ -10,6 +10,7 @@ public class MainMenuManager : MonoBehaviour {
 	private bool codeUsed;
 	public GameObject winstonHead;
 	public GameObject cactus;
+	public GameObject quitScreen;
 
 	// Use this for initialization
 	void Start () {
@@ -44,6 +45,14 @@ public class MainMenuManager : MonoBehaviour {
 		}
 	}
 
+	public void showQuitScreen() {
+		quitScreen.SetActive(true);
+	}
+
+	public void hideQuitScreen() {
+		quitScreen.SetActive(false);
+	}
+
 	public bool codeEntered() {
 		if (codeIndex >= code.Length) {
 			codeIndex = 0;
@@ -64,9 +73,5 @@ public class MainMenuManager : MonoBehaviour {
 
 	public void PlayMiniGame() {
 		SceneManager.LoadScene("MiniGame");
-	}
-
-	public void QuitGame(){
-		Debug.LogWarning ("You can't quit!!!");
 	}
 }

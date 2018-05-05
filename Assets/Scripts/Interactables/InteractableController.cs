@@ -5,13 +5,23 @@ using UnityEngine;
 public abstract class InteractableController : MonoBehaviour {
 
 	[SerializeField] private bool onlyOnce = false;
-	private bool used = false;
+	[SerializeField] private bool canUse = true;
 	
 	public void Interact(GameObject player) {
-		if (!onlyOnce || !used) {
+		if (canUse) {
 			InteractAction(player);
-			used = true;
+			if (onlyOnce) {
+				canUse = false;
+			}
 		}
+	}
+
+	public void SetActive(bool active) {
+		canUse = active;
+	}
+
+	public bool GetActive() {
+		return canUse;
 	}
 
 	public abstract void InteractAction(GameObject player);

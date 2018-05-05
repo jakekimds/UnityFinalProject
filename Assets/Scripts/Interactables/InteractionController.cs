@@ -17,10 +17,14 @@ public class InteractionController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		interactingObject = getInterationObject();
-		GUIManager.instance.showInteraction(interactingObject != null);
+		if (interactingObject != null && interactingObject.GetActive()) {
+			GUIManager.instance.showInteraction(true);
 
-		if (Input.GetKeyDown(KeyCode.E) && interactingObject != null) {
-			interactingObject.Interact(gameObject);
+			if (Input.GetKeyDown(KeyCode.E)) {
+				interactingObject.Interact(gameObject);
+			}
+		} else {
+			GUIManager.instance.showInteraction(false);
 		}
 	}
 

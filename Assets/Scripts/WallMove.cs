@@ -10,6 +10,7 @@ public class WallMove : MonoBehaviour {
 	bool hasMoved;
 	float offset;
 	Transform other;
+	public InteractableController interaction;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,7 @@ public class WallMove : MonoBehaviour {
 				transform.position = new Vector3 (targetX, transform.position.y, transform.position.z);
 				isMoving = false;
 				hasMoved = true;
+				interaction.SetActive(true);
 			} else {
 				if (other.position.x < transform.position.x + offset) {
 					transform.position = new Vector3 (other.position.x - offset, transform.position.y, transform.position.z);

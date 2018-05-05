@@ -27,6 +27,8 @@ public class TestController : MonoBehaviour {
 	public GameObject winstonHead;
 	public string tutorialSceneName;
 	private bool enterToAdvance;
+	public CanvasGroup introStory;
+	public float introStoryFadeTime;
 
 	// Use this for initialization
 	void Start () {
@@ -39,6 +41,8 @@ public class TestController : MonoBehaviour {
 		delay = 0;
 		currentTarget = 0;
 		enterToAdvance = false;
+
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	public void nextStage(){
@@ -63,17 +67,20 @@ public class TestController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Return)) {
-			nextStage ();
-		}
+		GUIManager.instance.showDirections(false, 0);
 		int currentStage = 1;
 		if (!stagePlaying) {
-			if (!enterToAdvance) {
-				if (delay < 0) {
+
+			if (delay < 0) {
+				if (!enterToAdvance) {
 					nextStage();
+				} else {
+					GUIManager.instance.directions("Press enter to continue", 0);
 				}
-				delay -= Time.deltaTime;
 			} else {
+				delay -= Time.deltaTime;
+			}
+			if (enterToAdvance) {
 				if (Input.GetKeyDown(KeyCode.Return)) {
 					nextStage();
 				}
@@ -81,9 +88,22 @@ public class TestController : MonoBehaviour {
 			return;
 		}
 		if (stage == currentStage++) {
-			Cursor.lockState = CursorLockMode.Locked;
+			introStory.gameObject.SetActive(true);
+			introStory.alpha = 1;
+			enterToAdvance = true;
+			stagePlaying = false;
+		}else if (stage == currentStage++) {
+			if (introStory.alpha <= 0) {
+				introStory.alpha = 0;
+				introStory.gameObject.SetActive(false);
+				stagePlaying = false;
+				enterToAdvance = false;
+				delay = 0;
+			} else {
+				introStory.alpha -= (1 / introStoryFadeTime) * Time.deltaTime;
+			}
+		} else if (stage == currentStage++) {
 			if (!moveTowards(winston, target)) {
-				enterToAdvance = true;
 				stagePlaying = false;
 				anim.SetBool("moving", false);
 				messageBox.SetActive(true);
@@ -96,19 +116,23 @@ public class TestController : MonoBehaviour {
 		} else if (stage == currentStage++) {
 			text.text = "IT Guy: I want a raise.";
 			enterToAdvance = true;
+			delay = 1;
 			stagePlaying = false;
 		} else if (stage == currentStage++) {
 			text.text = "Me: No";
 			enterToAdvance = true;
+			delay = 1;
 			stagePlaying = false;
 		} else if (stage == currentStage++) {
 			text.text = "IT Guy: Please...";
 			enterToAdvance = true;
+			delay = 1;
 			stagePlaying = false;
 		} else if (stage == currentStage++) {
 			text.text = "Me: Get out of here";
 			projectile.GetComponent<Rigidbody>().AddForce((head.position - projectile.transform.position).normalized * force, ForceMode.VelocityChange);
 			enterToAdvance = true;
+			delay = 1;
 			stagePlaying = false;
 		} else if (stage == currentStage++) {
 			text.text = "IT Guy: You'll regret this";
