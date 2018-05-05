@@ -11,9 +11,11 @@ public class MainMenuManager : MonoBehaviour {
 	public GameObject winstonHead;
 	public GameObject cactus;
 	public GameObject quitScreen;
+	public GameObject clippy;
 
 	// Use this for initialization
 	void Start () {
+		clippy.SetActive(false);
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
 		code = new KeyCode[]{
@@ -33,6 +35,11 @@ public class MainMenuManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (Input.GetKeyDown(KeyCode.H)) {
+			clippy.SetActive(!clippy.activeInHierarchy);
+		}	
+
 		if (codeEntered()) {
 			if (!codeUsed) {
 				cactus.SetActive(true);
