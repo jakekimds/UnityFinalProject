@@ -11,7 +11,6 @@ public class MainMenuManager : MonoBehaviour {
 	public GameObject winstonHead;
 	public GameObject cactus;
 	public GameObject quitScreen;
-	public AudioSource audioS;
 
 	// Use this for initialization
 	void Start () {
@@ -34,9 +33,6 @@ public class MainMenuManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.anyKey) {
-			audioS.Play();
-		}
 		if (codeEntered()) {
 			if (!codeUsed) {
 				cactus.SetActive(true);
