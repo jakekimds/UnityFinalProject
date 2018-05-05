@@ -7,13 +7,13 @@ public class FlickeringLight : MonoBehaviour {
 	public int minFrames;
 	public int maxFrames;
 
-	Light light;
+	Light lightComp;
 	bool lightOn;
 	int framesToToggle;
 
 	// Use this for initialization
 	void Start () {
-		light = GetComponent<Light> ();
+		lightComp = GetComponent<Light> ();
 		lightOn = true;
 		framesToToggle = Random.Range (minFrames, maxFrames);
 	}
@@ -23,7 +23,7 @@ public class FlickeringLight : MonoBehaviour {
 		if (framesToToggle <= 0) {
 			framesToToggle = Random.Range (minFrames, maxFrames);
 			lightOn = !lightOn;
-			light.enabled = lightOn;
+			lightComp.enabled = lightOn;
 		} else {
 			framesToToggle--;
 		}

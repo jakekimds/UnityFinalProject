@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: You need to get the flashlight.
-  fadeTime: 1
+  fadeTime: 5
 --- !u!65 &49403060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4790,15 +4790,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.2275922
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2.2275915
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.z
-      value: 6.515318
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114870713638061486, guid: e0aa072431de319429156f46a9a73c1b,
         type: 2}
@@ -12388,11 +12388,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.62
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.31
+      value: 1.72
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12417,33 +12417,6 @@ Prefab:
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_RootOrder
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.2275922
-      objectReference: {fileID: 0}
-    - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2.2275915
-      objectReference: {fileID: 0}
-    - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 6.515318
-      objectReference: {fileID: 0}
-    - target: {fileID: 114870713638061486, guid: e0aa072431de319429156f46a9a73c1b,
-        type: 2}
-      propertyPath: text
-      value: Where am I...?
-      objectReference: {fileID: 0}
-    - target: {fileID: 114870713638061486, guid: e0aa072431de319429156f46a9a73c1b,
-        type: 2}
-      propertyPath: onlyOnce
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114870713638061486, guid: e0aa072431de319429156f46a9a73c1b,
-        type: 2}
-      propertyPath: fadeTime
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
@@ -16031,20 +16004,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.2275922
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2.2275915
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.z
-      value: 6.515318
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114870713638061486, guid: e0aa072431de319429156f46a9a73c1b,
         type: 2}
       propertyPath: text
-      value: Finally... let's see where this goes. (E to interact)
+      value: Finally... let's see where this goes.
       objectReference: {fileID: 0}
     - target: {fileID: 1967162140337966, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_Name
@@ -16059,6 +16032,11 @@ Prefab:
         type: 2}
       propertyPath: fadeTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114870713638061486, guid: e0aa072431de319429156f46a9a73c1b,
+        type: 2}
+      propertyPath: directions
+      value: (E to interact)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
@@ -16266,20 +16244,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.2275922
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2.2275915
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.z
-      value: 6.515318
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114870713638061486, guid: e0aa072431de319429156f46a9a73c1b,
         type: 2}
       propertyPath: text
-      value: A door! (SHIFT to sprint)
+      value: A door!
       objectReference: {fileID: 0}
     - target: {fileID: 1967162140337966, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_Name
@@ -16294,6 +16272,11 @@ Prefab:
         type: 2}
       propertyPath: fadeTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114870713638061486, guid: e0aa072431de319429156f46a9a73c1b,
+        type: 2}
+      propertyPath: directions
+      value: (SHIFT to sprint)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
@@ -16692,6 +16675,14 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223965602168266, guid: f6bb3aeb9073b444e8d2fcf0d67b1c7d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179484621130042, guid: f6bb3aeb9073b444e8d2fcf0d67b1c7d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6bb3aeb9073b444e8d2fcf0d67b1c7d, type: 2}
@@ -20524,7 +20515,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.05
+      value: -10.91
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -20556,20 +20547,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.2275922
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2.2275915
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4122695248542244, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_LocalScale.z
-      value: 6.515318
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114870713638061486, guid: e0aa072431de319429156f46a9a73c1b,
         type: 2}
       propertyPath: text
-      value: Hey! A flashlight! (Look at flashlight)
+      value: Hey! A flashlight!
       objectReference: {fileID: 0}
     - target: {fileID: 1967162140337966, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
       propertyPath: m_Name
@@ -20590,6 +20581,11 @@ Prefab:
       value: 
       objectReference: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 114870713638061486, guid: e0aa072431de319429156f46a9a73c1b,
+        type: 2}
+      propertyPath: directions
+      value: (Look at flashlight)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0aa072431de319429156f46a9a73c1b, type: 2}
   m_IsPrefabParent: 0

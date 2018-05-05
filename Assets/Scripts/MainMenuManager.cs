@@ -15,6 +15,7 @@ public class MainMenuManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
 		code = new KeyCode[]{
 			KeyCode.UpArrow,
 			KeyCode.UpArrow,

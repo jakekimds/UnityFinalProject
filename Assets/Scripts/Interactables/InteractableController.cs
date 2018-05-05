@@ -24,5 +24,11 @@ public abstract class InteractableController : MonoBehaviour {
 		return canUse;
 	}
 
+	private void OnDrawGizmos() {
+		if (gameObject.layer != 9) {
+			Debug.LogError(name + " has InteractableController but not on Interactable layer");
+		}
+	}
+
 	public abstract void InteractAction(GameObject player);
 }

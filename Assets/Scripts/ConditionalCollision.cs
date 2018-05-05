@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public abstract class TutorialBlocker : MonoBehaviour {
+public abstract class ConditionalCollision : MonoBehaviour {
 	[TextArea(3, 10)]
 	public string text;
 	public float fadeTime = 0;
@@ -18,7 +18,7 @@ public abstract class TutorialBlocker : MonoBehaviour {
 			if (isReadyToPass(other)) {
 				gameObject.SetActive(false);
 			} else {
-				GUIManager.instance.dialog(text, fadeTime);
+				GUIManager.instance.directions(text, fadeTime);
 			}
 		}
 	}
