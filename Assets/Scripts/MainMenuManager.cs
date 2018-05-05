@@ -10,7 +10,7 @@ public class MainMenuManager : MonoBehaviour {
 	private bool codeUsed;
 	public GameObject winstonHead;
 	public GameObject cactus;
-	public GameObject quitScreen;
+	public GameObject credits;
 	public GameObject clippy;
 
 	// Use this for initialization
@@ -54,11 +54,11 @@ public class MainMenuManager : MonoBehaviour {
 	}
 
 	public void showQuitScreen() {
-		quitScreen.SetActive(true);
+		credits.SetActive(true);
 	}
 
 	public void hideQuitScreen() {
-		quitScreen.SetActive(false);
+		credits.SetActive(false);
 	}
 
 	public bool codeEntered() {
