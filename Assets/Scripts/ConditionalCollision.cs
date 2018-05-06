@@ -7,6 +7,8 @@ public abstract class ConditionalCollision : MonoBehaviour {
 	[TextArea(3, 10)]
 	public string text;
 	public float fadeTime = 0;
+	public Transform telePoint;
+	public bool copyRotation;
 
 	void Start() {
 	}
@@ -19,6 +21,12 @@ public abstract class ConditionalCollision : MonoBehaviour {
 				gameObject.SetActive(false);
 			} else {
 				GUIManager.instance.directions(text, fadeTime);
+				if (telePoint != null) {
+					other.transform.position = telePoint.position;
+					if (copyRotation) {
+						other.transform.rotation = telePoint.rotation;
+					}
+				}
 			}
 		}
 	}
