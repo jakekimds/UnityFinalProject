@@ -92,14 +92,14 @@ public class TestController : MonoBehaviour {
 			return;
 		}
 		if (stage == currentStage++) {
-			introStory.gameObject.SetActive(true);
+			introStory.gameObject.SetActive (true);
 			introStory.alpha = 1;
 			enterToAdvance = true;
 			stagePlaying = false;
-		}else if (stage == currentStage++) {
+		} else if (stage == currentStage++) {
 			if (introStory.alpha <= 0) {
 				introStory.alpha = 0;
-				introStory.gameObject.SetActive(false);
+				introStory.gameObject.SetActive (false);
 				stagePlaying = false;
 				enterToAdvance = false;
 				delay = 0;
@@ -107,16 +107,16 @@ public class TestController : MonoBehaviour {
 				introStory.alpha -= (1 / introStoryFadeTime) * Time.deltaTime;
 			}
 		} else if (stage == currentStage++) {
-			if (!moveTowards(winston, target)) {
+			if (!moveTowards (winston, target)) {
 				stagePlaying = false;
-				anim.SetBool("moving", false);
-				messageBox.SetActive(true);
+				anim.SetBool ("moving", false);
+				messageBox.SetActive (true);
 				text.text = "Me: What do you want?";
 				winston.transform.position = target.position;
 				LookAtXY (winston, player.transform);
 				return;
 			}
-			anim.SetBool("moving", true);
+			anim.SetBool ("moving", true);
 		} else if (stage == currentStage++) {
 			text.text = "IT Guy: I want a raise.";
 			enterToAdvance = true;
@@ -134,17 +134,17 @@ public class TestController : MonoBehaviour {
 			stagePlaying = false;
 		} else if (stage == currentStage++) {
 			text.text = "Me: Get out of here";
-			projectile.GetComponent<Rigidbody>().AddForce((head.position - projectile.transform.position).normalized * force, ForceMode.VelocityChange);
+			projectile.GetComponent<Rigidbody> ().AddForce ((head.position - projectile.transform.position).normalized * force, ForceMode.VelocityChange);
 			enterToAdvance = true;
 			delay = 1;
 			stagePlaying = false;
 		} else if (stage == currentStage++) {
 			text.text = "IT Guy: You'll regret this";
-			anim.SetBool("angry", true);
+			anim.SetBool ("angry", true);
 			delay = 1f;
 			stagePlaying = false;
 		} else if (stage == currentStage++) {
-			winston.SetActive(false);
+			winston.SetActive (false);
 			foreach (Light light in lights) {
 				light.intensity = 0f;
 			}
@@ -155,22 +155,47 @@ public class TestController : MonoBehaviour {
 				light.intensity = 0.4f;
 				light.color = color;
 			}
-			messageBox.SetActive(false);
+			messageBox.SetActive (false);
 			delay = 1f;
 			stagePlaying = false;
-		}else if (stage == currentStage++) {
+		} else if (stage == currentStage++) {
 			foreach (Light light in lights) {
 				light.intensity = 0f;
 			}
 			delay = .5f;
 			stagePlaying = false;
-		}else if (stage == currentStage++) {
+		} else if (GameData.cactusMode) {
+			if (stage == currentStage++) {
+				foreach (Light light in lights) {
+					light.intensity = 0.4f;
+					light.color = color;
+				}
+				spotLight.enabled = true;
+				cactus.SetActive(true);
+				delay = .1f;
+				stagePlaying = false;
+			} else if (stage == currentStage++) {
+				messageBox.SetActive(true);
+				text.text = "Me: What the...";
+				delay = 1f;
+				stagePlaying = false;
+			} else if (stage == currentStage++) {
+				cactus.SetActive(false);
+				foreach (Light light in lights) {
+					light.intensity = 0f;
+				}
+				spotLight.enabled = false;
+				delay = .5f;
+				stagePlaying = false;
+			} 
+		}
+		else if (stage == currentStage++) {
 			foreach (Light light in lights) {
 				light.intensity = 0.4f;
 				light.color = color;
 			}
 			spotLight.enabled = true;
-			cactus.SetActive(true);
+			winstonHead.SetActive(true);
 			delay = .1f;
 			stagePlaying = false;
 		} else if (stage == currentStage++) {
@@ -178,24 +203,7 @@ public class TestController : MonoBehaviour {
 			text.text = "Me: What the...";
 			delay = 1f;
 			stagePlaying = false;
-		} /**/else if (stage == currentStage++) {
-			cactus.SetActive(false);
-			foreach (Light light in lights) {
-				light.intensity = 0f;
-			}
-			spotLight.enabled = false;
-			delay = .5f;
-			stagePlaying = false;
 		} else if (stage == currentStage++) {
-			foreach (Light light in lights) {
-				light.intensity = 0.4f;
-				light.color = color;
-			}
-			spotLight.enabled = true;
-			winstonHead.SetActive(true);
-			delay = 1f;
-			stagePlaying = false;
-		}else if (stage == currentStage++) {
 			messageBox.SetActive(false);
 			messageBox.SetActive(false);
 			foreach (Light light in lights) {

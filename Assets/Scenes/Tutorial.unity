@@ -744,11 +744,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 49403058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3988ce5c45158c4eab6d41da10ca30a, type: 3}
+  m_Script: {fileID: 11500000, guid: ee38bd946901ceb4a981cce6274f84ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: You need to get the flashlight.
-  fadeTime: 5
+  text: You need the flashlight
+  fadeTime: 2
   telePoint: {fileID: 1176224237}
   copyRotation: 1
 --- !u!65 &49403060
@@ -3255,6 +3255,11 @@ Prefab:
     - target: {fileID: 126832, guid: 5241474d8a890dc45804e91d2deef410, type: 2}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114712403325258136, guid: 5241474d8a890dc45804e91d2deef410,
+        type: 2}
+      propertyPath: sceneName
+      value: Level 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5241474d8a890dc45804e91d2deef410, type: 2}

@@ -11,7 +11,6 @@ public class PlayerFlashlightController: MonoBehaviour {
 
 	private void Start() {
 		flashlight.enabled = on;
-		lightEnabled = false;
 	}
 
 	void Update()

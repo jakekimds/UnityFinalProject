@@ -324,7 +324,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 40
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 100
     m_Alignment: 1
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Text: When IT Guy asks the greedy, pointy haired, Bossman for a raise, Bossman
     goes too far and throws an object of indescribable evil at the money-striken IT
     Guy. Insulted, IT Guy appeals to the almighty Giant Cactus for justice. Will Bossman
-    learn his lesson, or will he be forever condemned to the punishment the cactus?
+    learn his lesson, or will he be forever condemned to the punishment of the cactus?
 --- !u!114 &114390532117894780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -824,11 +824,11 @@ RectTransform:
   m_Father: {fileID: 224884056638355252}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 0, y: 50}
-  m_Pivot: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 202}
+  m_SizeDelta: {x: 1920, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224839669493714852
 RectTransform:
   m_ObjectHideFlags: 1
@@ -861,11 +861,11 @@ RectTransform:
   m_Father: {fileID: 224884056638355252}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -450}
-  m_SizeDelta: {x: 0, y: 100}
-  m_Pivot: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -187}
+  m_SizeDelta: {x: 1920, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224864766558771964
 RectTransform:
   m_ObjectHideFlags: 1
@@ -919,11 +919,11 @@ RectTransform:
   m_Father: {fileID: 224884056638355252}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: -300, y: 250}
-  m_Pivot: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1620, y: 250}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &225057197668912858
 CanvasGroup:
   m_ObjectHideFlags: 1
