@@ -19,11 +19,19 @@ public class CactusEasteregg : MonoBehaviour {
 		if (countDown > 0) {
 			countDown -= 1;
 		} else {
+<<<<<<< HEAD
 			view.SetActive(false);
 		}
 
 		if (Input.GetKeyDown(KeyCode.H) && GameData.cactusMode) {
 			countDown = showTime;
+=======
+			view.SetActive(false);
+		}
+
+		if (Input.GetKeyDown(KeyCode.H) && GameData.cactusMode) {
+			countDown = showTime;
+>>>>>>> branch 'master' of https://github.com/jakekimds/UnityFinalProject.git
 			foreach (Transform child in view.transform) {
 				child.LookAt(player);
 			}
