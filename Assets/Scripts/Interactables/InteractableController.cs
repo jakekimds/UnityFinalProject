@@ -9,7 +9,7 @@ public abstract class InteractableController : MonoBehaviour {
 	
 	public void Interact(GameObject player) {
 		if (canUse) {
-			InteractAction(player);
+			InteractAction (player);
 			if (onlyOnce) {
 				canUse = false;
 			}

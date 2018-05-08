@@ -22,7 +22,7 @@ public class CactusEasteregg : MonoBehaviour {
 			view.SetActive(false);
 		}
 
-		if (Input.GetKeyDown(KeyCode.H)) {
+		if (Input.GetKeyDown(KeyCode.H) && GameData.cactusMode) {
 			countDown = showTime;
 			foreach (Transform child in view.transform) {
 				child.LookAt(player);

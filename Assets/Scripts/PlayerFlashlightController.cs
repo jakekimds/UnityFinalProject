@@ -5,13 +5,12 @@ using UnityEngine;
 public class PlayerFlashlightController: MonoBehaviour {
 
 	public Light flashlight;
-	bool on = false;
+	public bool on = false;
 
 	public bool lightEnabled = false;
 
 	private void Start() {
 		flashlight.enabled = on;
-		lightEnabled = false;
 	}
 
 	void Update()
@@ -21,6 +20,8 @@ public class PlayerFlashlightController: MonoBehaviour {
 				on = !on;
 				flashlight.enabled = on;
 			}
+		} else {
+			flashlight.enabled = false;
 		}
 	}
 }

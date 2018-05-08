@@ -43,10 +43,12 @@ public class MainMenuManager : MonoBehaviour {
 		if (codeEntered()) {
 			if (!codeUsed) {
 				cactus.SetActive(true);
+				GameData.cactusMode = true;
 				winstonHead.SetActive(false);
 				codeUsed = true;
 			} else {
 				cactus.SetActive(false);
+				GameData.cactusMode = false;
 				winstonHead.SetActive(true);
 				codeUsed = false;
 			}

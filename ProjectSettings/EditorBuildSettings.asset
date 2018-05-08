@@ -16,4 +16,10 @@ EditorBuildSettings:
     guid: 90bb17036ec973f42bc0e666df7d475d
   - enabled: 1
     path: Assets/Scenes/MiniGame.unity
+    guid: 0855e032fca6a654089366e0095f0df7
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 2d491dae2c1804f43bbcf9dbe6dba9bf
+  - enabled: 1
+    path: Assets/Scenes/Playground.unity
     guid: 00000000000000000000000000000000
