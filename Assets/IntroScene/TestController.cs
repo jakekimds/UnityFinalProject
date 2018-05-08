@@ -189,11 +189,7 @@ public class TestController : MonoBehaviour {
 				stagePlaying = false;
 			} 
 		}
-<<<<<<< HEAD
 		if (stage == currentStage++) {
-=======
-		else if (stage == currentStage++) {
->>>>>>> branch 'master' of https://github.com/jakekimds/UnityFinalProject.git
 			foreach (Light light in lights) {
 				light.intensity = 0.4f;
 				light.color = color;

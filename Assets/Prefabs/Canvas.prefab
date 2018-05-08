@@ -384,7 +384,6 @@ MonoBehaviour:
     goes too far and throws an object of indescribable evil at the money-striken IT
     Guy. Insulted, IT Guy appeals to the almighty Giant Cactus for justice. Will Bossman
     learn his lesson, or will he be forever condemned to the punishment of the cactus?
-<<<<<<< HEAD
 --- !u!114 &114278867256869108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -401,8 +400,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-=======
->>>>>>> branch 'master' of https://github.com/jakekimds/UnityFinalProject.git
 --- !u!114 &114390532117894780
 MonoBehaviour:
   m_ObjectHideFlags: 1
