@@ -5,17 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class CubeControllerTest : InteractableController {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public string sceneName = "MainMenu";
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	public override void InteractAction(GameObject player) {
-		SceneManager.LoadScene("MainMenu");
+		SceneManager.LoadScene(sceneName);
 	}
 }

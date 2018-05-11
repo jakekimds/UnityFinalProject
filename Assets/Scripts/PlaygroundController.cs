@@ -19,6 +19,7 @@ public class PlaygroundController : MonoBehaviour {
 	public GameObject QPanel;
 	public Transform FSTarget;
 	public GameObject cacti;
+	public AudioSource doorCreak;
 
 	private int currentStage;
 	private float countDown;
@@ -30,6 +31,7 @@ public class PlaygroundController : MonoBehaviour {
 	private GUIManager gui;
 	private bool qAnswered = false;
 	private bool raiseGiven;
+	private float doorSpeed;
 
 	void stages() {
 		if (!stagePlaying) {
@@ -38,12 +40,15 @@ public class PlaygroundController : MonoBehaviour {
 		int stage = 0;
 		if (++stage == currentStage) {
 			Vector3 rot = door.eulerAngles;
+			if (stageStart) {
+				doorCreak.Play ();
+			}
 			if (rot.y >= 270) {
 				door.rotation = Quaternion.Euler(new Vector3(0, 270, 0));
 				nextStage();
 				return;
 			} else {
-				door.rotation = Quaternion.Euler(new Vector3(0, rot.y + 50 * Time.deltaTime, 0));
+				door.rotation = Quaternion.Euler(new Vector3(0, rot.y + doorSpeed * Time.deltaTime, 0));
 			}
 		} else if (++stage == currentStage) {
 			if (stageStart) {
@@ -138,7 +143,7 @@ public class PlaygroundController : MonoBehaviour {
 			moving.LookAt(target);
 		}
 		Vector3 oldPos = moving.position;
-		Vector3 newPos = oldPos + moving.forward * speed * Time.deltaTime;
+		Vector3 newPos = oldPos + (target.position - moving.position).normalized * speed * Time.deltaTime;
 		if (Vector3.Distance(oldPos, target.position) < Vector3.Distance(newPos, target.position)) {
 			moving.transform.position = target.position;
 			return false;
@@ -153,6 +158,7 @@ public class PlaygroundController : MonoBehaviour {
 		countDown = 0;
 		nextStage();
 		gui = GUIManager.instance;
+		doorSpeed = 90/doorCreak.clip.length;
 	}
 
 	void waitForSeconds(float seconds) {

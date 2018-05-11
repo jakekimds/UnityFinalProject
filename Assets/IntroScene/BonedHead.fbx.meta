@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: f6e5148268d461549a33db39b7719b0f
+timeCreated: 1526005769
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: //RootNode
+    100004: CC_Base_Body
+    100006: CC_Base_Eye
+    100008: CC_Base_FacialBone
+    100010: CC_Base_Head
+    100012: CC_Base_HeadNub
+    100014: CC_Base_HeadNub_end
+    100016: CC_Base_HeadNub_end_end
+    100018: CC_Base_JawRoot
+    100020: CC_Base_L_Eye
+    100022: CC_Base_L_Eye_end
+    100024: CC_Base_L_Eye_end_end
+    100026: CC_Base_L_EyeRoot
+    100028: CC_Base_NeckTwist01
+    100030: CC_Base_NeckTwist02
+    100032: CC_Base_R_Eye
+    100034: CC_Base_R_Eye_end
+    100036: CC_Base_R_Eye_end_end
+    100038: CC_Base_R_EyeRoot
+    100040: CC_Base_Teeth
+    100042: CC_Base_Teeth01
+    100044: CC_Base_Teeth01_end
+    100046: CC_Base_Teeth01_end_end
+    100048: CC_Base_Teeth02
+    100050: CC_Base_Teeth02_end
+    100052: CC_Base_Teeth02_end_end
+    100054: CC_Base_Tongue
+    100056: CC_Base_Tongue01
+    100058: CC_Base_Tongue02
+    100060: CC_Base_Tongue03
+    100062: CC_Base_Tongue03Nub
+    100064: CC_Base_Tongue03Nub_end
+    100066: CC_Base_Tongue03Nub_end_end
+    100068: CC_Base_UpperJaw
+    100070: Dummy
+    100072: Dummy 1
+    100074: Dummy_S
+    100076: Dummy_Transform
+    100078: Dummy_Transform 1
+    100080: Dummy_Transform_end
+    100082: Dummy_Transform_end_end
+    100084: Hair
+    100086: Hair_M01
+    100088: Hair_M01 1
+    100090: Hair_M01.001
+    100092: Hair_M01.001_end
+    400000: Armature
+    400002: //RootNode
+    400004: CC_Base_Body
+    400006: CC_Base_Eye
+    400008: CC_Base_FacialBone
+    400010: CC_Base_Head
+    400012: CC_Base_HeadNub
+    400014: CC_Base_HeadNub_end
+    400016: CC_Base_HeadNub_end_end
+    400018: CC_Base_JawRoot
+    400020: CC_Base_L_Eye
+    400022: CC_Base_L_Eye_end
+    400024: CC_Base_L_Eye_end_end
+    400026: CC_Base_L_EyeRoot
+    400028: CC_Base_NeckTwist01
+    400030: CC_Base_NeckTwist02
+    400032: CC_Base_R_Eye
+    400034: CC_Base_R_Eye_end
+    400036: CC_Base_R_Eye_end_end
+    400038: CC_Base_R_EyeRoot
+    400040: CC_Base_Teeth
+    400042: CC_Base_Teeth01
+    400044: CC_Base_Teeth01_end
+    400046: CC_Base_Teeth01_end_end
+    400048: CC_Base_Teeth02
+    400050: CC_Base_Teeth02_end
+    400052: CC_Base_Teeth02_end_end
+    400054: CC_Base_Tongue
+    400056: CC_Base_Tongue01
+    400058: CC_Base_Tongue02
+    400060: CC_Base_Tongue03
+    400062: CC_Base_Tongue03Nub
+    400064: CC_Base_Tongue03Nub_end
+    400066: CC_Base_Tongue03Nub_end_end
+    400068: CC_Base_UpperJaw
+    400070: Dummy
+    400072: Dummy 1
+    400074: Dummy_S
+    400076: Dummy_Transform
+    400078: Dummy_Transform 1
+    400080: Dummy_Transform_end
+    400082: Dummy_Transform_end_end
+    400084: Hair
+    400086: Hair_M01
+    400088: Hair_M01 1
+    400090: Hair_M01.001
+    400092: Hair_M01.001_end
+    4300000: CC_Base_Tongue
+    4300002: CC_Base_Eye
+    4300004: CC_Base_Body
+    4300006: Dummy_Transform
+    4300008: Hair_M01
+    4300010: Dummy
+    4300012: CC_Base_Teeth
+    7400000: Armature|Armature|Armature|Walk|Armature|Walk
+    9500000: //RootNode
+    13700000: CC_Base_Body
+    13700002: CC_Base_Eye
+    13700004: CC_Base_Teeth
+    13700006: CC_Base_Tongue
+    13700008: Dummy
+    13700010: Dummy_Transform
+    13700012: Hair_M01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
