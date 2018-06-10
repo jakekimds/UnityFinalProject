@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8dafdaa25717d914caa37925293c0d9b
+timeCreated: 1527785957
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - nextCallBack: {instanceID: 0}
+  - Crate: {instanceID: 0}
+  - cracked: {fileID: 1168907351885854, guid: b3dc6d5c1ab8158418b2f82094975753, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

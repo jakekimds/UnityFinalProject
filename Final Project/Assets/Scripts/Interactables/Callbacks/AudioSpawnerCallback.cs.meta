@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 61640de20f118e244a65dbf4624be924
+timeCreated: 1527751407
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - nextCallBack: {instanceID: 0}
+  - clip: {instanceID: 0}
+  - position: {instanceID: 0}
+  - audioSource: {fileID: 1900511713036428, guid: cd25018d285b309459eb2b889801c9ef,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
