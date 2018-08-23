@@ -1,0 +1,45 @@
+﻿# The Adventures of IT Guy and Bossman
+
+When IT Guy asks the greedy, pointy haired, Bossman for a raise, Bossman goes too far and throws an object of indescribable evil at the money-striken IT Guy. Insulted, IT Guy appeals to the almighty Giant Cactus for justice. Will Bossman learn his lesson, or will he be forever condemned to the punishment of the cactus?
+
+### Notes:
+
+ - Backspace does not go to main menu on mini game
+	 - Workaround: press P to pause then click main menu
+ - The VR Minigame does not work in VR when built
+ - You can left-click instead of pressing E to interact
+ - Pressing Enter in the beginning logo scenes to skip
+ - Hint: The main character's name is Bossman
+
+
+### Easter Eggs (ROT 13)
+
+ - Ragre gur Xbanzv Pbqr va gur znva zrah gb haybpx pnpghf zbqr. Jura va pnpghf zbqr...
+	 - Gur pnpghf synfurf ol ng gur raq bs gur vageb phgfprar
+	 - Cerffvat U yriry jvyy erirny pnpgv va gur ghgbevny yriry
+	 - Nqqvgvbany yvarf bs qvnybhtr jvgu gur pnpghf va gur jnerubhfr yriry
+	 - Pnpgv nggnpx qhevat raq phgfprar vs lbh qb abg tvir VG Thl n envfr
+ - Fxryrgba'f urnq nyjnlf snprf lbh
+ - Cerffvat gur fdhrnxl ohggba 10 gvzrf jvyy cynl *Arire Tbaan Tvir Lbh Hc*
+ - Va gur zbivat sybbef yriry, vagrenpgvat jvgu gur jvfu tenagvat pnpghf n frpbaq gvzr jvyy erirny n thvyybgvar
+ - Va gur jnerubhfr yriry, tenoovat gur fvyire xrl ba gbc bs gur jnerubhfr ebbs jvyy haybpx n pbagnvare ng gur pbeare bs gur yriry, erirnyvat Obffzna'f qrfx
+
+
+### Supported Systems
+
+ - Windows 7+
+ - macOS 10.9+
+
+
+### Running
+
+Unzip the files and run the executables.
+On Mac: If a `Unknown Developer` error occurs, right click and click `open`. 
+
+
+### Authors
+
+ - Aaron Glick
+ - Clayton Hegemier
+ - Daniel Renfield
+ - Jake Kim

@@ -12,14 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/THX.unity
     guid: c1d2f99addbd46b4282e479bb49287f4
   - enabled: 1
-    path: Assets/Scenes/TestLevel2.75.unity
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/Level2.25.unity
+    guid: ba778f1877ccc47b6a165b2e32f7370c
   - enabled: 1
     path: Assets/Scenes/Logo1.unity
     guid: 95b71e4610e696e4bb06fef50a5ef80a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: 2a1d4b06fc3dec942877b5d155476bfd
+  - enabled: 1
+    path: Assets/Scenes/SIntro.unity
+    guid: 6082a88d7bd74e348acdee026d0e9801
   - enabled: 1
     path: Assets/Scenes/Logo2.unity
     guid: 504bd41b2025ed743965b376ba66efcb
@@ -38,6 +41,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 90bb17036ec973f42bc0e666df7d475d
+  - enabled: 1
+    path: Assets/Scenes/Level2.75.unity
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Probuilder Scene.unity
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2d491dae2c1804f43bbcf9dbe6dba9bf

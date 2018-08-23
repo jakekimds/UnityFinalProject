@@ -109,7 +109,6 @@ GameObject:
   - component: {fileID: 4439091139492106}
   - component: {fileID: 33868061003879822}
   - component: {fileID: 23669738195491298}
-  - component: {fileID: 54909716238927410}
   - component: {fileID: 65205412249150838}
   m_Layer: 9
   m_Name: Button
@@ -316,7 +315,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210379926333934}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -92.48933, y: 16.915585, z: 3.4633143}
+  m_LocalPosition: {x: 4.625302, y: -0.046156596, z: 11.131289}
   m_LocalScale: {x: 0.2814427, y: 0.28144264, z: 0.28144264}
   m_Children:
   - {fileID: 4439091139492106}
@@ -635,21 +634,6 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!54 &54909716238927410
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1531388684142568}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!65 &65016612509673202
 BoxCollider:

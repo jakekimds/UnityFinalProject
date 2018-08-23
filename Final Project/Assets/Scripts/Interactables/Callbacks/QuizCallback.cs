@@ -68,6 +68,7 @@ public class QuizCallback : Callback {
 						Callback.Call(IfCorrect);
 					} else {
 						Callback.Call(IfWrong);
+                        GameManager.i.SendAction("Quiz Answered", "Given: "+currentGuess + " / Correct: "+Answer);
 					}
 
 					Time.timeScale = originalTimeScale;

@@ -32,10 +32,10 @@ public class DialogCallback : Callback {
 			currentIndex++;
 		}
 		isActive = true;
-		PlayerController.instance.fpController.enabled = false;
-		PlayerController.instance.fpLook.enabled = true;
-		PlayerController.instance.interactionController.canInteract = false;
-		PlayerController.instance.rb.velocity = Vector3.zero;
+		PlayerTracker.instance.fpController.enabled = false;
+		PlayerTracker.instance.fpLook.enabled = true;
+		PlayerTracker.instance.interactionController.canInteract = false;
+		PlayerTracker.instance.rb.velocity = Vector3.zero;
 		gui.showDirections(false, 0);
 		gui.showDialog(false);
 		gui.dialog(text[currentIndex].text);
@@ -64,9 +64,9 @@ public class DialogCallback : Callback {
 				isActive = false;
 				gui.showDirections(false, 0);
 				gui.showDialog(false);
-				PlayerController.instance.fpController.enabled = true;
-				PlayerController.instance.fpLook.enabled = false;
-				PlayerController.instance.interactionController.canInteract = true;
+				PlayerTracker.instance.fpController.enabled = true;
+				PlayerTracker.instance.fpLook.enabled = false;
+				PlayerTracker.instance.interactionController.canInteract = true;
 				if (dialogReactor != null) {
 					dialogReactor.dialogEnd();
 				}

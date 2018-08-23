@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.23679504, g: 0.14925024, b: 0.1808703, a: 1}
+  m_IndirectSpecularColor: {r: 0.23679522, g: 0.14925027, b: 0.18087047, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3671,9 +3671,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26718a8b1e8bf504abe0e61675c7c6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextCallBack: {fileID: 0}
+  nextCallBack: {fileID: 363860696}
   OnlyOnce: 0
-  SceneName: TestLevel2.75
+  SceneName: Level2.75
   FadeOut: 1
 --- !u!114 &363860695
 MonoBehaviour:
@@ -3690,6 +3690,21 @@ MonoBehaviour:
   canUse: 1
   callback: {fileID: 363860694}
   Instructions: 
+--- !u!114 &363860696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 363860693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Scene Change
+  Action: To level 2.75
 --- !u!4 &369071198 stripped
 Transform:
   m_PrefabParentObject: {fileID: 438162, guid: a1291014f043d2c4faf8c717cf9e34b7, type: 2}
@@ -6361,9 +6376,34 @@ Prefab:
       propertyPath: KillOnTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114970473711171814, guid: 4b6c98e6157216f46af100fd1fcf2a01,
+        type: 2}
+      propertyPath: OnKill
+      value: 
+      objectReference: {fileID: 585930595}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b6c98e6157216f46af100fd1fcf2a01, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &585930594 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1244735882589578, guid: 4b6c98e6157216f46af100fd1fcf2a01,
+    type: 2}
+  m_PrefabInternal: {fileID: 585930593}
+--- !u!114 &585930595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585930594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Died
+  Action: Fell Down
 --- !u!1001 &589054347
 Prefab:
   m_ObjectHideFlags: 0
@@ -10839,10 +10879,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4956331416129732, guid: a539fa4f7024d7a4eb14d13d3fa5062b, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 355.573
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a539fa4f7024d7a4eb14d13d3fa5062b, type: 2}
   m_IsPrefabParent: 0
@@ -11227,10 +11263,9 @@ GameObject:
   - component: {fileID: 1089435322}
   - component: {fileID: 1089435321}
   - component: {fileID: 1089435320}
-  - component: {fileID: 1089435319}
-  - component: {fileID: 1089435318}
   - component: {fileID: 1089435317}
   - component: {fileID: 1089435316}
+  - component: {fileID: 1089435318}
   m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
@@ -11263,7 +11298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be368f2313db6c4391b99090294aef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextCallBack: {fileID: 0}
+  nextCallBack: {fileID: 1089435318}
   OnlyOnce: 0
   audioSource: {fileID: 384575640}
   newClip: {fileID: 8300000, guid: a3234745ef79ba244925c0d57230b625, type: 3}
@@ -11283,7 +11318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onlyOnce: 1
   canUse: 1
-  callback: {fileID: 1089435318}
+  callback: {fileID: 1089435316}
   Instructions: 
 --- !u!114 &1089435318
 MonoBehaviour:
@@ -11293,32 +11328,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1089435314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04bf8a7a5a929ad45b869637c7a43a94, type: 3}
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextCallBack: {fileID: 0}
   OnlyOnce: 0
-  UserName: glicka0192
-  IfTrue: {fileID: 1089435319}
-  IfFalse: {fileID: 1089435316}
---- !u!114 &1089435319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1089435314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2be368f2313db6c4391b99090294aef2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextCallBack: {fileID: 0}
-  OnlyOnce: 0
-  audioSource: {fileID: 384575640}
-  newClip: {fileID: 8300000, guid: c23e44399a62f0e498e237358f231b27, type: 3}
-  play: 1
-  changeVolume: 0
-  newVolume: 0
+  Title: EE Found
+  Action: Indiana Jones Theme Song
 --- !u!65 &1089435320
 BoxCollider:
   m_ObjectHideFlags: 0

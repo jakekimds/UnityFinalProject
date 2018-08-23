@@ -8,7 +8,7 @@ public class CactusDialogPortal : DialogReactor {
 	public InteractionGUI worshipGoogol;
 
 	public override void dialogEnd(){
-		PlayerController.instance.transform.position = new Vector3 (1, 0.92f, 10f);
+		PlayerTracker.instance.transform.position = new Vector3 (1, 0.92f, 10f);
 		portal.SetActive(true);
 		worshipGoogol.SetActive (true);
 	}

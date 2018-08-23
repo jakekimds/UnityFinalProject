@@ -13,5 +13,6 @@ public class ApplyForceCallback : Callback
     {
         RB.isKinematic = false;
         RB.AddForce(Direction.normalized * Force, ForceMode.Impulse);
+		Debug.Log (Direction.normalized * Force);
     }
 }

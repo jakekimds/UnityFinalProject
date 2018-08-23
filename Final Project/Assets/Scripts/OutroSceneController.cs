@@ -125,15 +125,22 @@ public class OutroSceneController : MonoBehaviour {
 					music.Play ();
 					money.gameObject.SetActive(true);
 					SkelScale.SetActive (false);
+                    GameManager.i.SendAction("Raise Choice", "Gave Raise");
+					GameManager.i.SendAction ("Fate", "Lived another day");
 				}
 				if (!moveTowards(money, moneyTarget, 1f, false)) {
 					gui.dialog("IT Guy: YAY!");
 					waitForEnter();
 				}
 			} else {
+                if(stageStart){
+                    GameManager.i.SendAction("Raise Choice", "Didn't Give Raise");
+                }
 				fire.SetActive(true);
+				GameManager.i.SendAction ("Fate", "Being burned to death");
 				if (GameData.cactusMode) {
-					cacti.SetActive(true);
+					cacti.SetActive (true);
+					GameManager.i.SendAction ("Fate", "Being beaten by cacti");
 				}
 				WinSkel.SetActive(false);
 				gui.dialog("IT Guy: I'm sorry boss.");
@@ -143,7 +150,13 @@ public class OutroSceneController : MonoBehaviour {
 			gui.fadeOut(1f);
 			waitForSeconds(1f);
 		} else if (++stage == currentStage) {
-			SceneManager.LoadScene("MainMenu");
+            if (raiseGiven) {
+                GameManager.i.SendAction("Scene Change", "To Sequel Intro");
+				SceneManager.LoadScene("SIntro");
+            } else {
+                GameManager.i.SendAction("Scene Change", "To Main Menu");
+				SceneManager.LoadScene("MainMenu");
+			}
 		}
 		if (stage == currentStage) {
 			stageStart = false;

@@ -774,6 +774,8 @@ GameObject:
   - component: {fileID: 49403061}
   - component: {fileID: 49403060}
   - component: {fileID: 49403059}
+  - component: {fileID: 49403063}
+  - component: {fileID: 49403062}
   m_Layer: 0
   m_Name: TutorialBlocker
   m_TagString: Untagged
@@ -796,6 +798,8 @@ MonoBehaviour:
   fadeTime: 2
   telePoint: {fileID: 1176224237}
   copyRotation: 1
+  PassCallback: {fileID: 49403063}
+  FailCallback: {fileID: 49403062}
 --- !u!65 &49403060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -822,6 +826,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &49403062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 49403058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Tutorial Event
+  Action: Flashlight Blocker Failed
+--- !u!114 &49403063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 49403058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Tutorial Event
+  Action: Flashlight Blocker Passed
 --- !u!1001 &51589472
 Prefab:
   m_ObjectHideFlags: 0
@@ -911,9 +945,34 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114082069281891930, guid: 28f189f837e07aa47aa80348c75b20dc,
+        type: 2}
+      propertyPath: callback
+      value: 
+      objectReference: {fileID: 59348056}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28f189f837e07aa47aa80348c75b20dc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &59348055 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1458846702119238, guid: 28f189f837e07aa47aa80348c75b20dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 59348054}
+--- !u!114 &59348056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59348055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Tutorial Event
+  Action: Flashlight picked up
 --- !u!4 &62801017 stripped
 Transform:
   m_PrefabParentObject: {fileID: 438162, guid: a1291014f043d2c4faf8c717cf9e34b7, type: 2}
@@ -3600,8 +3659,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onlyOnce: 1
   canUse: 0
-  callback: {fileID: 0}
+  callback: {fileID: 258383772}
+  Instructions: 
   sceneName: Level1
+--- !u!114 &258383772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258383770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Scene Change
+  Action: Door to level 2
 --- !u!4 &267472234 stripped
 Transform:
   m_PrefabParentObject: {fileID: 418792, guid: f7062f5e280305843958a840362dd8b9, type: 2}

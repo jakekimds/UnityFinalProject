@@ -5761,6 +5761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KillOnCollision: 1
   KillOnTrigger: 1
+  OnKill: {fileID: 541954156}
 --- !u!65 &541954153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5800,6 +5801,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &541954156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 541954150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Died
+  Action: Death by fall
 --- !u!4 &542950434 stripped
 Transform:
   m_PrefabParentObject: {fileID: 418792, guid: f7062f5e280305843958a840362dd8b9, type: 2}
@@ -9962,6 +9978,7 @@ GameObject:
   - component: {fileID: 885971786}
   - component: {fileID: 885971790}
   - component: {fileID: 885971787}
+  - component: {fileID: 885971784}
   m_Layer: 9
   m_Name: Button
   m_TagString: Untagged
@@ -9982,6 +9999,21 @@ Transform:
   m_Father: {fileID: 541632803}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &885971784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885971782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Button Press
+  Action: Death Button Press
 --- !u!65 &885971785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10020,7 +10052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98869cb24159e647a884abbf93c2424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextCallBack: {fileID: 0}
+  nextCallBack: {fileID: 885971784}
   OnlyOnce: 0
   directions: 
   directionsFadeTime: 0
@@ -14827,6 +14859,7 @@ GameObject:
   - component: {fileID: 1359649996}
   - component: {fileID: 1359649998}
   - component: {fileID: 1359649997}
+  - component: {fileID: 1359649990}
   m_Layer: 9
   m_Name: Button
   m_TagString: Untagged
@@ -14847,6 +14880,21 @@ Transform:
   m_Father: {fileID: 1444481463}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1359649990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1359649988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Button Press
+  Action: Stone Wall Mover
 --- !u!65 &1359649991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14965,7 +15013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 168800cf99c19fe47b93afc0077b6547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextCallBack: {fileID: 0}
+  nextCallBack: {fileID: 1359649990}
   OnlyOnce: 0
   obj: {fileID: 1350507058}
   SetActive: 0
@@ -19115,6 +19163,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KillOnCollision: 1
   KillOnTrigger: 1
+  OnKill: {fileID: 1732557588}
+--- !u!114 &1732557588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1732557583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Died
+  Action: Death by fall
 --- !u!54 &1732557589
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20145,6 +20209,7 @@ GameObject:
   - component: {fileID: 1803941116}
   - component: {fileID: 1803941115}
   - component: {fileID: 1803941114}
+  - component: {fileID: 1803941108}
   m_Layer: 9
   m_Name: Button
   m_TagString: Untagged
@@ -20165,6 +20230,21 @@ Transform:
   m_Father: {fileID: 1199102487}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1803941108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1803941106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Button Press
+  Action: Gate Opener Button Press
 --- !u!65 &1803941109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20258,7 +20338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98869cb24159e647a884abbf93c2424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextCallBack: {fileID: 0}
+  nextCallBack: {fileID: 1803941108}
   OnlyOnce: 0
   directions: 
   directionsFadeTime: 0
@@ -20427,9 +20507,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onlyOnce: 0
   canUse: 0
-  callback: {fileID: 0}
+  callback: {fileID: 1808750292}
   Instructions: 
   sceneName: Level2
+--- !u!114 &1808750292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1808750290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fddddd5dc674646b4b7c9df59bc708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCallBack: {fileID: 0}
+  OnlyOnce: 0
+  Title: Scene Change
+  Action: To level 2
 --- !u!1 &1810795140
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class SkeletonLook : MonoBehaviour {
 	Vector3 startRot;
 
 	void Update(){
-		Vector3 lookRot = transform.position - PlayerController.instance.transform.position;
+		Vector3 lookRot = transform.position - PlayerTracker.instance.transform.position;
 		lookRot.y = 0;
 		Vector3 rotation = Quaternion.LookRotation(lookRot).eulerAngles;
 		Vector3 rot = Vector3.zero;

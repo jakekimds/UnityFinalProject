@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.23679498, g: 0.14925024, b: 0.18087023, a: 1}
+  m_IndirectSpecularColor: {r: 0.23679522, g: 0.14925027, b: 0.18087047, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1633,6 +1633,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840207842}
+--- !u!1001 &871977669
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4222771063691626, guid: d272514ffbb10b34ea9452bc5a3b4c22, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222771063691626, guid: d272514ffbb10b34ea9452bc5a3b4c22, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222771063691626, guid: d272514ffbb10b34ea9452bc5a3b4c22, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222771063691626, guid: d272514ffbb10b34ea9452bc5a3b4c22, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222771063691626, guid: d272514ffbb10b34ea9452bc5a3b4c22, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222771063691626, guid: d272514ffbb10b34ea9452bc5a3b4c22, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222771063691626, guid: d272514ffbb10b34ea9452bc5a3b4c22, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222771063691626, guid: d272514ffbb10b34ea9452bc5a3b4c22, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d272514ffbb10b34ea9452bc5a3b4c22, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &967111156 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1429752164835834, guid: b93f6932538b9b84ab89a1fc194cb04d,
@@ -2352,7 +2394,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 66
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
     m_Alignment: 4
@@ -2361,7 +2403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: VR Minigame
+  m_Text: Minigame
 --- !u!222 &1469738038
 CanvasRenderer:
   m_ObjectHideFlags: 0

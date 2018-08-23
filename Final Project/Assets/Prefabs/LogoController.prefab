@@ -51,4 +51,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf57761f48ba0254fb342b0a9d8c933d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: Logo2
+  NextLevel: Logo1

@@ -7,7 +7,8 @@ public class LogoController : MonoBehaviour {
 	public string NextLevel;
 
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Return)) {
+        if (Input.GetKeyDown (KeyCode.Return)) {
+            GameManager.i.SendAction("Logo Skipped", "");
 			UnityEngine.SceneManagement.SceneManager.LoadScene (NextLevel);
 		}
 	}

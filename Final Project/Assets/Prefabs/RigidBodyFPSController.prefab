@@ -55,11 +55,11 @@ GameObject:
   - component: {fileID: 114432190992752028}
   - component: {fileID: 114260867366796146}
   - component: {fileID: 114870892956344480}
-  - component: {fileID: 114360806836264174}
   - component: {fileID: 114055915237138706}
   - component: {fileID: 23960992880447036}
   - component: {fileID: 33619345366826552}
   - component: {fileID: 114745180724039108}
+  - component: {fileID: 114394788885373608}
   m_Layer: 0
   m_Name: RigidBodyFPSController
   m_TagString: Player
@@ -181,15 +181,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1342727066134106}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 2.1813583, y: 1.7041022, z: -2.6488764}
+  m_LocalRotation: {x: -0, y: 0.038623907, z: -0, w: -0.99925387}
+  m_LocalPosition: {x: 11.23, y: 1.97, z: 2.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4306102057434748}
   - {fileID: 4448520668048556}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 210.88899, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 355.573, z: 0}
 --- !u!4 &4987315121235482
 Transform:
   m_ObjectHideFlags: 1
@@ -498,7 +498,7 @@ MonoBehaviour:
   range: 3
   canInteract: 1
   originObject: {fileID: 4306102057434748}
---- !u!114 &114360806836264174
+--- !u!114 &114394788885373608
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -506,13 +506,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1342727066134106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6083c5832c3ea44bb0fbb754e9b265, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e39b76e0c0b93d4694b37fd4c272ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 54578371061378318}
-  fpController: {fileID: 114432190992752028}
-  fpLook: {fileID: 114745180724039108}
-  interactionController: {fileID: 114260867366796146}
+  rb: {fileID: 0}
+  fpController: {fileID: 0}
+  fpLook: {fileID: 0}
+  interactionController: {fileID: 0}
 --- !u!114 &114432190992752028
 MonoBehaviour:
   m_ObjectHideFlags: 1

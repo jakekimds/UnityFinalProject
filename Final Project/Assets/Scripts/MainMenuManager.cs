@@ -16,8 +16,12 @@ public class MainMenuManager : MonoBehaviour {
 	public GameObject loadScreen;
 	public AudioSource whispers;
 
+    private bool clippyReleased = false;
+
 	// Use this for initialization
 	void Start () {
+        PlayerPrefs.SetInt("Tracking", 1);
+		GameManager.i.SendAction("Is Tracking", "" + (PlayerPrefs.GetInt("Tracking", 1)>0), true);
 		clippy.SetActive(false);
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
@@ -47,14 +51,18 @@ public class MainMenuManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown(KeyCode.H)) {
-			clippy.SetActive(!clippy.activeInHierarchy);
-		}	
-
-		if (Input.GetKeyDown (KeyCode.F1)) {
-			PlayerPrefs.SetInt ("EasterEgg", 0);
-			PlayerPrefs.Save ();
-		}
+        if (Input.GetKey(KeyCode.T) && Input.GetKey(KeyCode.R) && Input.GetKeyDown(KeyCode.K) && clippyReleased) {
+            if(PlayerPrefs.GetInt("Tracking", 1) == 0){
+                PlayerPrefs.SetInt("Tracking", 1);
+            }else{
+                PlayerPrefs.SetInt("Tracking", 0);
+            }
+            clippy.SetActive(PlayerPrefs.GetInt("Tracking", 1) == 0);
+			GameManager.i.SendAction("Is Tracking",  ""+ (PlayerPrefs.GetInt("Tracking", 1)>0), true);
+            clippyReleased = false;
+        }else{
+            clippyReleased = true;
+        }
 
 		if (codeEntered()) {
 			if (!codeUsed) {
@@ -63,6 +71,7 @@ public class MainMenuManager : MonoBehaviour {
 				winstonHead.SetActive(false);
 				codeUsed = true;
 				whispers.Play();
+                GameManager.i.SendAction("EE Found", "Cactus Mode set to true");
 
 			} else {
 				cactus.SetActive(false);
@@ -70,11 +79,13 @@ public class MainMenuManager : MonoBehaviour {
 				winstonHead.SetActive(true);
 				codeUsed = false;
 				whispers.Stop();
+                GameManager.i.SendAction("EE Found", "Cactus Mode set to false");
 			}
 		}
 	}
 
 	public void showQuitScreen() {
+        GameManager.i.SendAction("Menu Option", "Credits opened.");
 		credits.SetActive(true);
 	}
 
@@ -99,9 +110,11 @@ public class MainMenuManager : MonoBehaviour {
 	public void StartGame() {
 		loadScreen.SetActive (true);
 		SceneManager.LoadScene("THX");
+        GameManager.i.SendAction("Menu Option", "Play button pressed");
 	}
 
 	public void PlayMiniGame() {
+        GameManager.i.SendAction("Menu Option", "Play MiniGame Button Pressed");
 		loadScreen.SetActive (true);
 		if (VRDevice.isPresent) {
 			SceneManager.LoadScene("MiniGame");

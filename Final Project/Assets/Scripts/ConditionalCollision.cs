@@ -10,6 +10,9 @@ public abstract class ConditionalCollision : MonoBehaviour {
 	public Transform telePoint;
 	public bool copyRotation;
 
+    public Callback PassCallback;
+    public Callback FailCallback;
+
 	void Start() {
 	}
 
@@ -19,7 +22,9 @@ public abstract class ConditionalCollision : MonoBehaviour {
 		if (other.CompareTag("Player")) {
 			if (isReadyToPass(other)) {
 				gameObject.SetActive(false);
+                Callback.Call(PassCallback);
 			} else {
+                Callback.Call(FailCallback);
 				GUIManager.instance.directions(text, fadeTime);
 				if (telePoint != null) {
 					other.transform.position = telePoint.position;

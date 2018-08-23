@@ -24,6 +24,7 @@ public class CactusEasteregg : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.H) && GameData.cactusMode) {
 			countDown = showTime;
+            GameManager.i.SendAction("EE Found", "Hidden Cacti Found");
 			foreach (Transform child in view.transform) {
 				child.LookAt(player);
 			}
