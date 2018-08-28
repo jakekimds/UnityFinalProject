@@ -35,7 +35,7 @@ When IT Guy asks the greedy, pointy haired, Bossman for a raise, Bossman goes to
 
 
 ### Running
-Unzip the files and run the executables.
+Unzip the files and run the executables.<br>
 On Mac: If a `Unknown Developer` error occurs, right click and click `open`. 
 
 
