@@ -1,9 +1,14 @@
-﻿# The Adventures of IT Guy and Bossman
 
+# The Adventures of IT Guy and Bossman
 When IT Guy asks the greedy, pointy haired, Bossman for a raise, Bossman goes too far and throws an object of indescribable evil at the money-striken IT Guy. Insulted, IT Guy appeals to the almighty Giant Cactus for justice. Will Bossman learn his lesson, or will he be forever condemned to the punishment of the cactus?
 
-### Notes:
 
+### Download Standalone
+ - [Mac](https://drive.google.com/open?id=1U8f2sKpx19lhn6Fb1kw4Y5CHWa2Vbpyl)
+ - [Windows](https://drive.google.com/open?id=1S_whQ1QCqBARtdS5hAM7D94RV_xsXQGT)
+
+
+### Notes
  - Backspace does not go to main menu on mini game
 	 - Workaround: press P to pause then click main menu
  - The VR Minigame does not work in VR when built
@@ -13,7 +18,6 @@ When IT Guy asks the greedy, pointy haired, Bossman for a raise, Bossman goes to
 
 
 ### Easter Eggs (ROT 13)
-
  - Ragre gur Xbanzv Pbqr va gur znva zrah gb haybpx pnpghf zbqr. Jura va pnpghf zbqr...
 	 - Gur pnpghf synfurf ol ng gur raq bs gur vageb phgfprar
 	 - Cerffvat U yriry jvyy erirny pnpgv va gur ghgbevny yriry
@@ -26,20 +30,16 @@ When IT Guy asks the greedy, pointy haired, Bossman for a raise, Bossman goes to
 
 
 ### Supported Systems
-
  - Windows 7+
  - macOS 10.9+
 
 
 ### Running
-
 Unzip the files and run the executables.
-
 On Mac: If a `Unknown Developer` error occurs, right click and click `open`. 
 
 
 ### Authors
-
  - Aaron Glick
  - Clayton Hegemier
  - Daniel Renfield
