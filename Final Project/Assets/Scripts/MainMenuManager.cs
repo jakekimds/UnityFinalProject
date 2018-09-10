@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.VR;
+using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour {
 
@@ -11,11 +12,12 @@ public class MainMenuManager : MonoBehaviour {
 	private bool codeUsed;
 	public GameObject winstonHead;
 	public GameObject cactus;
-	public GameObject credits;
+	public GameObject feedback;
 	public GameObject clippy;
 	public GameObject loadScreen;
+	public Text feedbackField;
 	public AudioSource whispers;
-
+	float timescale;
     private bool clippyReleased = false;
 
 	// Use this for initialization
@@ -84,13 +86,27 @@ public class MainMenuManager : MonoBehaviour {
 		}
 	}
 
-	public void showQuitScreen() {
+	public void showFeedback() {
         GameManager.i.SendAction("Menu Option", "Credits opened.");
-		credits.SetActive(true);
+		feedback.SetActive(true);
+		timescale = Time.timeScale;
+		Time.timeScale = 0;
+		GameManager.instance.SendAction("Feedback button clicked", "Feedback button clicked");
 	}
 
-	public void hideQuitScreen() {
-		credits.SetActive(false);
+	public void hideFeedback() {
+		feedback.SetActive(false);
+		Time.timeScale = timescale;
+	}
+
+	public void submitFeedback() {
+		GameManager.instance.SendGoogleForm("1FAIpQLSewFLVRYT_3D_4qJSZJKd8sHSUn18i1n5qocqxbOCj9S8Bh5Q", new Dictionary<string, string> {
+			{ "1538973523", feedbackField.text},
+			{ "68037904", GameManager.SessionID },
+			{ "916105115", GameManager.UserName }
+		});
+		GameManager.instance.SendAction("Feedback Submitted", feedbackField.text);
+		hideFeedback();
 	}
 
 	public bool codeEntered() {

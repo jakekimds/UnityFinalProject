@@ -8,6 +8,7 @@ public class PlayerTracker : MonoBehaviour {
 
 	public static PlayerTracker instance;
 	public Rigidbody rb;
+	public AudioSource audiosource;
 
 	public RigidbodyFirstPersonController fpController;
 	public FirstPersonLook fpLook;

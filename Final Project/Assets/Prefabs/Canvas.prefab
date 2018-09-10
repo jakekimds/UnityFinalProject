@@ -554,6 +554,7 @@ GameObject:
   - component: {fileID: 114033363508886942}
   - component: {fileID: 114799398683237456}
   - component: {fileID: 114803173146123782}
+  - component: {fileID: 114810365230803600}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1706,6 +1707,43 @@ MonoBehaviour:
   Controls: {fileID: 1873242264443094}
   PauseControls: {fileID: 1473744515673084}
   AllowPausing: 1
+--- !u!114 &114810365230803600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918813380457818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3498602a50b804419a637da88fefc33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: c23e44399a62f0e498e237358f231b27, type: 3}
+  - {fileID: 8300000, guid: f18729eb896ac294488fbe39ddd3be1a, type: 3}
+  - {fileID: 8300000, guid: 00fdd53ab7bd532459398f6cc9b1bc85, type: 3}
+  - {fileID: 8300000, guid: 6fafbafec44c8054fb3a03bf8c7bf9a4, type: 3}
+  - {fileID: 8300000, guid: 7ceedc4edf2940543b4411c5c2229008, type: 3}
+  - {fileID: 8300000, guid: 6ca46cda526447843978430407a216ad, type: 3}
+  - {fileID: 8300000, guid: 0d6146de13f02524fb464dfb127e4c40, type: 3}
+  - {fileID: 8300000, guid: 63476f97ad144da4ab5dbf8db32c1698, type: 3}
+  - {fileID: 8300000, guid: 5bee8471b773a334da2bce7bd6259a37, type: 3}
+  - {fileID: 8300000, guid: a3234745ef79ba244925c0d57230b625, type: 3}
+  - {fileID: 8300000, guid: 6861e99e96e1a7e4ca141a7da814a33b, type: 3}
+  - {fileID: 8300000, guid: 5680a56224efe824bac63e8760181ef0, type: 3}
+  - {fileID: 8300000, guid: 1b03af87fba03c445994d8be4fc04d77, type: 3}
+  - {fileID: 8300000, guid: d1c5d66463952c44b9f5157fa729e7ce, type: 3}
+  - {fileID: 8300000, guid: 40af70c3c8ab5034aa07a0fda5e96bc3, type: 3}
+  - {fileID: 8300000, guid: 00cefd7ee075ea949bbea02a6f68a864, type: 3}
+  - {fileID: 8300000, guid: 9310241351eb048419970e278e87c737, type: 3}
+  - {fileID: 8300000, guid: f8b124f0209cf3640acc9244e9a20fb5, type: 3}
+  - {fileID: 8300000, guid: 066987d861fa510458475b1a93d09bd1, type: 3}
+  - {fileID: 8300000, guid: f5b814c5f55581a478cd5025c3a2d475, type: 3}
+  - {fileID: 8300000, guid: 0b5ac9dec2ffb784ba736f579ce65e94, type: 3}
+  - {fileID: 8300000, guid: 057f50854e84c5c4990beb5a813f7366, type: 3}
+  - {fileID: 8300000, guid: 9785fc65a1ff93742a1135f8163c18fc, type: 3}
+  - {fileID: 8300000, guid: c9dcddeafe871a94583561c3b99184e1, type: 3}
+  - {fileID: 8300000, guid: 2a6c2531e6a5ca7418a53684f877824a, type: 3}
 --- !u!114 &114826278778269230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2262,7 +2300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 27.399902}
+  m_AnchoredPosition: {x: 0, y: 27.40039}
   m_SizeDelta: {x: 1000, y: 120}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224071223455386244

@@ -5,6 +5,9 @@ using UnityEngine;
 public class GameData : MonoBehaviour {
 
 	public static bool cactusMode = false;
+	public static bool networkOn = true;
+	public static string SessionID = "";
+	public static string UserName = "";
 	public static Dictionary<string, bool> InteractionFlags;
 	public static Dictionary<string, int> InteractionCounters;
 

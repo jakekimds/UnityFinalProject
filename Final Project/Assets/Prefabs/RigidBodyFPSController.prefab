@@ -510,6 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  audiosource: {fileID: 82080146787515842}
   fpController: {fileID: 0}
   fpLook: {fileID: 0}
   interactionController: {fileID: 0}
