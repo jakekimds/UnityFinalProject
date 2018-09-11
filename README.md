@@ -4,8 +4,6 @@ When IT Guy asks the greedy, pointy haired, Bossman for a raise, Bossman goes to
 
 
 ### Notes
- - Backspace does not go to main menu on mini game
-	 - Workaround: press P to pause then click main menu
  - The VR Minigame does not work in VR when built
  - You can left-click instead of pressing E to interact
  - Pressing Enter in the beginning logo scenes to skip
