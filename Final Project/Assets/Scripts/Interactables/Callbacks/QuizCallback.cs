@@ -21,6 +21,7 @@ public class QuizCallback : Callback {
 		currentGuess = "";
 
 		Answer = Answer.ToUpper();
+		GameData.InitializeCountersDict();
 	}
 
 	string getRawString() {
@@ -86,13 +87,23 @@ public class QuizCallback : Callback {
 	}
 
 	public override void OnCall() {
-		currentGuess = "";
-		originalTimeScale = Time.timeScale;
-		GUIManager.instance.setQuizQuestion(Question);
-		GUIManager.instance.setQuizAnswer(getRawString());
-		GUIManager.instance.showQuiz(true);
-		showingQuiz = true;
-		countdown = .2f;
-		Time.timeScale = 0;
+		int count = 0;
+		string flagName = "QuizFreebies";
+		if (GameData.InteractionCounters.ContainsKey(flagName)) {
+			count = GameData.InteractionCounters[flagName];
+			GameData.InteractionCounters[flagName]--;
+		} else {
+			GameData.InteractionCounters.Add(flagName, 0);
+		}
+		if (!(count > 0)) {
+			currentGuess = "";
+			originalTimeScale = Time.timeScale;
+			GUIManager.instance.setQuizQuestion(Question);
+			GUIManager.instance.setQuizAnswer(getRawString());
+			GUIManager.instance.showQuiz(true);
+			showingQuiz = true;
+			countdown = .2f;
+			Time.timeScale = 0;
+		}
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class MessageController : MonoBehaviour {
 
@@ -27,7 +28,7 @@ public class MessageController : MonoBehaviour {
 					}
 				}
 			}
-			yield return new WaitForSeconds(3);
+			yield return new WaitForSeconds(1);
 		}
 	}
 
@@ -37,7 +38,7 @@ public class MessageController : MonoBehaviour {
 		string endIdentifier = "\\n//\\n//\\n(e102f448-ec45-4f94-9fbf-e6da9b09a251)\\nEND";
 
 		int startIndex = gDocHTML.IndexOf(startIdentifier) + startIdentifier.Length;
-		int endIndex = gDocHTML.IndexOf(endIdentifier);
+		int endIndex = gDocHTML.IndexOf(endIdentifier, startIndex);
 		int length = endIndex - startIndex;
 
 		string rawMessageString = gDocHTML.Substring(startIndex, length);
@@ -83,11 +84,10 @@ public class MessageController : MonoBehaviour {
 	}
 
 	void handleNewMessages(string[] messages, int newMessageCount) {
-		for (int i = messages.Length - 1; i >= messages.Length - newMessageCount; i--){
+		for (int i = messages.Length - newMessageCount; i < messages.Length; i++){
 			MessageObject message = parseMessage(messages[i]);
 			if (atMatchesMe(message) && message.Message != "") {
 				displayMessage(message);
-				break;
 			}
 		}
 	}
@@ -110,12 +110,21 @@ public class MessageController : MonoBehaviour {
 	}
 
 	void executeCommand(string command) {
-		string keyword = "sound";
-		if (command.ToLower().Substring(0, keyword.Length) == keyword) {
-			string parameter = command.Substring(keyword.Length + 1).ToLower();
+
+		int keywordIndex = command.IndexOf(" ");
+		string keyword = command.Substring(0, keywordIndex).Trim().ToLower();
+		string[] parameters = command.Substring(keywordIndex + 1).Split(';');
+		Debug.Log(command);
+
+		for (int i = 0; i < parameters.Length; i++) {
+			parameters[i] = parameters[i].Trim();
+		}
+
+		if (keyword == "sound") {
+			string song = parameters[0].ToLower();
 			if (PlayerTracker.instance != null && PlayerTracker.instance.audiosource != null) {
 				foreach (AudioClip clip in sounds) {
-					if (clip.name.ToLower().EndsWith(parameter) || clip.name.ToLower().StartsWith(parameter)) {
+					if (clip.name.ToLower().Contains(song)) {
 						PlayerTracker.instance.audiosource.clip = clip;
 						PlayerTracker.instance.audiosource.loop = true;
 						PlayerTracker.instance.audiosource.Play();
@@ -123,12 +132,77 @@ public class MessageController : MonoBehaviour {
 					}
 				}
 			}
+		} else if (keyword == "scene") {
+			string sceneName = parameters[0];
+			UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+		} else if (keyword == "message") {
+			string message = parameters[0];
+			GUIManager.instance.dialog(message);
+		} else if (keyword == "direction") {
+			string direction = parameters[0];
+			GUIManager.instance.directions(direction, 0);
+		} else if (keyword == "setVar") {
+			string variable = parameters[0];
+			if (variable == "cactusMode") {
+				GameData.cactusMode = stringToBool(parameters[1]);
+			}
+		} else if (keyword == "setdict") {
+			string variable = parameters[0];
+			string key = parameters[1];
+			string value = parameters[2];
+			if (variable == "InteractionFlags") {
+				if (GameData.InteractionFlags != null) {
+					if (GameData.InteractionFlags.ContainsKey(key)) {
+						GameData.InteractionFlags[key] = stringToBool(value);
+					} else {
+						GameData.InteractionFlags.Add(key, stringToBool(value));
+					}
+				}
+			} else if (variable == "InteractionCounters") {
+				int flagValue;
+				bool success = int.TryParse(value, out flagValue);
+				if (success) {
+					if (GameData.InteractionCounters != null) {
+						if (GameData.InteractionCounters.ContainsKey(key)) {
+							GameData.InteractionCounters[key] = flagValue;
+						} else {
+							GameData.InteractionCounters.Add(key, flagValue);
+						}
+					}
+				}
+			}
+		} else if (keyword == "show") {
+			string variable = parameters[0];
+			string title = "Show: " + variable;
+			if (variable == "cactusMode") {
+				GameManager.i.SendAction(title, GameData.cactusMode.ToString());
+			} else if (variable == "InteractionFlags") {
+				string output = "Key - Value";
+				if (GameData.InteractionFlags != null) {
+					foreach (KeyValuePair<string, bool> entry in GameData.InteractionFlags) {
+						output += "\n" + entry.Key + " - " + entry.Value;
+					}
+				}
+				GameManager.i.SendAction(title, output);
+			} else if (variable == "InteractionCounters") {
+				string output = "Key - Value";
+				if (GameData.InteractionCounters != null) {
+					foreach (KeyValuePair<string, int> entry in GameData.InteractionCounters) {
+						output += "\n" + entry.Key + " - " + entry.Value;
+					}
+				}
+				GameManager.i.SendAction(title, output);
+			}
+		} else if (keyword == "die") {
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
-		command = "scene";
-		if (command.ToLower().Substring(0, keyword.Length) == keyword) {
-			string parameter = command.Substring(keyword.Length + 1);
-			UnityEngine.SceneManagement.SceneManager.LoadScene(parameter);
+	}
+
+	bool stringToBool(string str) {
+		if (str.Trim().ToLower()[0] == 't') {
+			return true;
 		}
+		return false;
 	}
 
 	MessageObject parseMessage(string message) {

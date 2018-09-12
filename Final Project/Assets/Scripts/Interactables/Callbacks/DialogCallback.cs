@@ -72,8 +72,8 @@ public class DialogCallback : Callback {
 				}
 				Callback.Call(EndCallback);
 			} else {
-				gui.dialog(text[currentIndex].text);
 				Callback.Call(text[currentIndex].callback);
+				gui.dialog(text[currentIndex].text);
 				gui.directions("Press Enter to Continue", 0);
 				if (dialogReactor != null) {
 					dialogReactor.dialogChanged(currentIndex);
