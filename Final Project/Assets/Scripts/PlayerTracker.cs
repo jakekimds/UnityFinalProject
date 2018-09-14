@@ -13,6 +13,7 @@ public class PlayerTracker : MonoBehaviour {
 	public RigidbodyFirstPersonController fpController;
 	public FirstPersonLook fpLook;
 	public InteractionController interactionController;
+	public GameObject player;
 
 	// Use this for initialization
 	private void Awake() {
@@ -28,6 +29,7 @@ public class PlayerTracker : MonoBehaviour {
 		fpController = GetComponent<RigidbodyFirstPersonController> ();
 		fpLook = GetComponent<FirstPersonLook> ();
 		interactionController = GetComponent<InteractionController> ();
+		player = gameObject;
 	}
 
 	public void Start(){

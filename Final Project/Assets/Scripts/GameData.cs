@@ -10,6 +10,9 @@ public class GameData : MonoBehaviour {
 	public static string UserName = "";
 	public static Dictionary<string, bool> InteractionFlags;
 	public static Dictionary<string, int> InteractionCounters;
+	public static string nullString;
+
+	public static List<string> InteractableObjects;
 
 	public static void InitializeFlagsDict() {
 		if (InteractionFlags == null || InteractionFlags.Count > 0) {

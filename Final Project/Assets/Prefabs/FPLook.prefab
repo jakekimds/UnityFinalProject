@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 114812263642682006}
   - component: {fileID: 114098400707366790}
   - component: {fileID: 114708000016398356}
+  - component: {fileID: 114762808767233228}
   m_Layer: 0
   m_Name: FPLook
   m_TagString: Player
@@ -305,7 +306,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashlight: {fileID: 108256718774628596}
-  on: 0
   lightEnabled: 0
 --- !u!114 &114708000016398356
 MonoBehaviour:
@@ -328,6 +328,23 @@ MonoBehaviour:
     smoothTime: 5
     lockCursor: 1
   cam: {fileID: 20123675764425766}
+--- !u!114 &114762808767233228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1807484898217188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e39b76e0c0b93d4694b37fd4c272ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  audiosource: {fileID: 82565221476255724}
+  fpController: {fileID: 0}
+  fpLook: {fileID: 114708000016398356}
+  interactionController: {fileID: 114812263642682006}
+  player: {fileID: 1807484898217188}
 --- !u!114 &114812263642682006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -340,6 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 5
+  canInteract: 1
   originObject: {fileID: 4045334370705918}
 --- !u!124 &124837009135233598
 Behaviour:

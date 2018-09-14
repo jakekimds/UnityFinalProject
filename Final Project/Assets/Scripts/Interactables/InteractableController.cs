@@ -12,7 +12,13 @@ public abstract class InteractableController : MonoBehaviour {
 	private float period = 1f;
 	Material[] materials;
 
+	void Awake() {
+		gameObject.name = gameObject.name + gameObject.GetInstanceID();
+		GameData.InteractableObjects = new List<string>();
+	}
+
 	void Start(){
+		GameData.InteractableObjects.Add(gameObject.name);
 		period = 2 * Mathf.PI / period;
 		Renderer[] renderers = GetComponentsInChildren<Renderer> ();
 		materials = new Material[renderers.Length];

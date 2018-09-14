@@ -114,7 +114,7 @@ public class MessageController : MonoBehaviour {
 		int keywordIndex = command.IndexOf(" ");
 		string keyword = command.Substring(0, keywordIndex).Trim().ToLower();
 		string[] parameters = command.Substring(keywordIndex + 1).Split(';');
-		Debug.Log(command);
+		//Debug.Log(command);
 
 		for (int i = 0; i < parameters.Length; i++) {
 			parameters[i] = parameters[i].Trim();
@@ -175,7 +175,7 @@ public class MessageController : MonoBehaviour {
 			string variable = parameters[0];
 			string title = "Show: " + variable;
 			if (variable == "cactusMode") {
-				GameManager.i.SendAction(title, GameData.cactusMode.ToString());
+				SendResponse(title, GameData.cactusMode.ToString());
 			} else if (variable == "InteractionFlags") {
 				string output = "Key - Value";
 				if (GameData.InteractionFlags != null) {
@@ -183,7 +183,7 @@ public class MessageController : MonoBehaviour {
 						output += "\n" + entry.Key + " - " + entry.Value;
 					}
 				}
-				GameManager.i.SendAction(title, output);
+				SendResponse(title, output);
 			} else if (variable == "InteractionCounters") {
 				string output = "Key - Value";
 				if (GameData.InteractionCounters != null) {
@@ -191,10 +191,29 @@ public class MessageController : MonoBehaviour {
 						output += "\n" + entry.Key + " - " + entry.Value;
 					}
 				}
-				GameManager.i.SendAction(title, output);
+				SendResponse(title, output);
+			} else if (variable == "InteractableObjects") {
+				string output = "Object Names:";
+				if (GameData.InteractableObjects != null) {
+					foreach (string name in GameData.InteractableObjects) {
+						output += "\n" + name;
+					}
+				}
+				SendResponse(title, output);
+			}
+		} else if (keyword == "interact") {
+			string name = parameters[0];
+			GameObject obj = GameObject.Find(name);
+			if (obj != null) {
+				InteractableController[] interacts = obj.GetComponents<InteractableController>();
+				foreach (InteractableController interactable in interacts) {
+					interactable.Interact(PlayerTracker.instance.gameObject);
+				} 
 			}
 		} else if (keyword == "die") {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		} else if (keyword == "quit") {
+			Application.Quit();
 		}
 	}
 
@@ -217,6 +236,37 @@ public class MessageController : MonoBehaviour {
 			message = message.Substring(firstNewline + 1);
 		}
 		return new MessageObject(at, message);
+	}
+
+	public void SendResponse(string command, string response) {
+		string scene = SceneManager.GetActiveScene().name;
+
+		Dictionary<string, string> parameters = new Dictionary<string, string>{
+			{ "446525886", GameData.UserName },
+			{ "1285306095", GameData.SessionID },
+			{ "1193729513", scene },
+			{ "804872919", command },
+			{ "27380576", response },
+		};
+
+		GameManager.instance.SendGoogleForm("1FAIpQLSe1HC_Gn4eTWTm9UxJTq5vqZkX8MK9yDwT36Pkm38NlFcFh9g", parameters);
+	}
+
+	void OnEnable() {
+		Application.logMessageReceived += HandleLog;
+	}
+
+	void OnDisable() {
+		Application.logMessageReceived -= HandleLog;
+	}
+
+	void HandleLog(string logString, string stackTrace, LogType type) {
+		string title = type.ToString("F") + " : " + logString;
+		GameManager.instance.SendAction(title, stackTrace);
+
+		if (type == LogType.Error || type == LogType.Exception) {
+			SendResponse("Error", title + "\n" + stackTrace);
+		}
 	}
 }
 
