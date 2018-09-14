@@ -6,7 +6,7 @@ When IT Guy asks the greedy, pointy haired, Bossman for a raise, Bossman goes to
 ### Notes
  - The VR Minigame does not work in VR when built
  - You can left-click instead of pressing E to interact
- - Pressing Enter in the beginning logo scenes to skip
+ - Press Enter in the beginning logo scenes to skip
  - Hint: The main character's name is Bossman
 
 
